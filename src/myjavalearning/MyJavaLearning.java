@@ -20,6 +20,7 @@ public class MyJavaLearning {
      */
     public static void main(String[] args) {
         System.out.println(App.isPalindrome("AMA"));
+        System.out.println("MyTest");
     }
     
 }
