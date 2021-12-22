@@ -23,7 +23,9 @@ public class MyJavaLearning {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //System.out.println(App.normalizeUrl("HateisReality"));//50/62
+        System.out.println(App.normalizeUrl("HateisReality"));//50/62
+        System.out.println(App.isPalindrome("AMA"));
+        System.out.println("MyTest");
     }
     
 }
