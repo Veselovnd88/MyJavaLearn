@@ -15,7 +15,18 @@ class App {
             return "https://"+ str;
         }
     }
-    // END
+    public static String getNumberExplanation(int num) {
+    	switch (num) {
+    	case 666:
+    		return "devil number";
+    	case 42:
+    		return "answer for everything";
+    	case 7:
+    		return "prime number";
+    	default: 
+    		return null;
+    	}
+    }
 }
 public class MyJavaLearning {
 
@@ -23,9 +34,11 @@ public class MyJavaLearning {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println(App.normalizeUrl("HateisReality"));//50/62
+        System.out.println(App.normalizeUrl("HateifsReality"));//50/62
         System.out.println(App.isPalindrome("AMA"));
-        System.out.println("MyTest");
+        System.out.println(App.getNumberExplanation(0));
+        System.out.println(App.getNumberExplanation(42));
+        System.out.println(App.getNumberExplanation(666));
     }
     
 }
