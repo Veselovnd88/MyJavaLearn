@@ -53,7 +53,7 @@ public static String encrypt(String str) {
     return result;
     // END
 }
-public static void withscanner() {
+public static void withscanner() {//Javarush
 	Scanner scanner = new Scanner (System.in);
 	int sum = 0;
 	boolean isExit = false;
