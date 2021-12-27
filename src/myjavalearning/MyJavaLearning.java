@@ -85,7 +85,7 @@ public class MyJavaLearning {
         //System.out.println(App.getNumberExplanation(666));
     	//App.printNumbers(5);
     	//System.out.println(App.encrypt("attack"));
-    	App.withscanner();
+    	//App.withscanner();
     }
     
 }
