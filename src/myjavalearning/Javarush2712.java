@@ -27,11 +27,41 @@ class Mytask2712{
 			sum+=i;
 		} System.out.println(sum);
 	}
+	public static void minimumscanner() {
+		//28.12
+		Scanner scanner = new Scanner(System.in);
+		int min = Integer.MAX_VALUE;
+		while(scanner.hasNextInt()) {
+
+			int num = scanner.nextInt();
+			if (num<=min) {
+				min = num;
+			}
+			
+		}System.out.println(min);
+		scanner.close();
+	}
+	public static void secminimum() {
+		Scanner scanner = new Scanner(System.in);
+		int min1 = Integer.MAX_VALUE;
+		int min2 = Integer.MAX_VALUE;
+		while(scanner.hasNextInt()) {
+			int num = scanner.nextInt();
+			if (num<min1) {//min1=5, 
+				min2 = min1;
+				min1 = num;
+			}
+			if(num<min2 && num!=min1) {
+				min2 = num;}
+			
+		} System.out.println(min2);
+		scanner.close();
+	}
 }
 public class Javarush2712 {
 
 	public static void main(String[] args) {
-	Mytask2712.listOvnumbers();}
+	Mytask2712.secminimum();}
 
 
 }
