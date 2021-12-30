@@ -90,8 +90,8 @@ class Mytask2712{
 }
 public class Javarush2712 {
 
-	public static void main(String[] args) {
-	Mytask2712.kratn();}
+	//public static void main(String[] args) {
+	//Mytask2712.kratn();}
 
 
 }
