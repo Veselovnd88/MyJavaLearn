@@ -16,7 +16,7 @@ class Java3012{
 }
 public class MyJava3012 {
 	public static void main(String[] args) {
-		Java3012.mytriangle(10, "8");
+		//Java3012.mytriangle(10, "8");
 
 		
 		
