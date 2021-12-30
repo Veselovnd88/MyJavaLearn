@@ -57,11 +57,41 @@ class Mytask2712{
 		} System.out.println(min2);
 		scanner.close();
 	}
+	public static void evenmax() {
+		Scanner scanner = new Scanner(System.in);
+		int max = Integer.MIN_VALUE;
+		while(scanner.hasNextInt()) {
+			int num = scanner.nextInt();
+			if(num>=max && num%2==0) {
+				max = num;
+			}
+		}System.out.println(max);
+		scanner.close();
+	}
+	public static void alleven() {
+		for(int i = 1; i<=15;i++) {
+			if(i%2==0) {
+				System.out.println(i);
+			}
+		}
+	}
+	public static void kratn() {
+		Scanner scanner = new Scanner(System.in);
+		int start = scanner.nextInt();
+		int end = scanner.nextInt();
+		int multiple = scanner.nextInt();
+		int sum = 0;
+		for (int i = start; i<end; i++) {
+			if (i%multiple!=0) continue;
+			sum+=i;
+		}System.out.println(sum);
+		scanner.close();
+	}
 }
 public class Javarush2712 {
 
 	public static void main(String[] args) {
-	Mytask2712.secminimum();}
+	Mytask2712.kratn();}
 
 
 }
