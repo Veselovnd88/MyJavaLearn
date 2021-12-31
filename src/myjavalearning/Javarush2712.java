@@ -87,11 +87,20 @@ class Mytask2712{
 		}System.out.println(sum);
 		scanner.close();
 	}
+	public static void dowh() {
+    Scanner scanner = new Scanner(System.in);
+   String str =  scanner.nextLine();
+   int num = scanner.nextInt();
+   do {System.out.println(str);
+   num--;}
+   while (num>0 &&num <4);
+   scanner.close();}
 }
 public class Javarush2712 {
 
-	//public static void main(String[] args) {
+	public static void main(String[] args) {
 	//Mytask2712.kratn();}
-
+	//Mytask2712.dowh();
+	}
 
 }
