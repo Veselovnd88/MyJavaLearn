@@ -1,9 +1,55 @@
 package myjavalearning;
 
+class courseraCalendar{
+	public static void showme() {
+		System.out.println("Start of output for challenge exercise");
+		String[] days = new String[] {"Sun", "Mon","Tue","Wed","Thu","Fri","Sat"};
+		for(String day:days) {//print first row with days
+			System.out.print(day+" ");
+		}
+		System.out.println();
+		
+		int alldays = 31;
+		int start = 1;
+		int interval = 3;
+		int endline = 29;// 25
+		int current = (start-1)*(interval+1);
+		
+		System.out.print(" ".repeat(current));//current 16
+		int ad = 0;
+		current++;//current 17
+		for (int i =1; i<=alldays; i++) {
+			if(current%endline==0) {
+				System.out.println();
+				current=1;
+			}if (i/10<=0) {
+				ad = 0;
+			} else { 
+				ad = -1;
+			}
+			System.out.print(Integer.toString(i)+" ".repeat(interval+ad));
+			current=current+interval+1;
+			
+		}
+				
+		
+		
+	}
+	
+}
+
 public class CourseraLearningQuest {
 
-	public static void main(String[] args) {
-		int[] daysInMonth = new int[12];
+	
+public static void main(String[] args) {
+	courseraCalendar.showme();
+	
+	
+	
+	
+	
+}
+		/*int[] daysInMonth = new int[12];
 		String[] monthNames = new String[] {"January", "February", "March", "April","May",
 				"June", "July","August","September","October","November","December"};
 	
@@ -52,5 +98,5 @@ public class CourseraLearningQuest {
 		}
 
 	}
-
+*/
 }
