@@ -71,21 +71,51 @@ public static void withscanner() {//Javarush
 	scanner.close();
 	System.out.println(sum);
 }
+
+public static void rectQ() {
+	/*Используя вложенные циклы while (цикл в цикле) выведи на экран прямоугольник размером 
+	 * 5 (высота) на 10 (ширина), заполненный буквой 'Q'.*/
+	int height =0;
+
+	while (height<5) {
+		int width = 0;
+		while(width<10) {
+			System.out.print('Q');
+			width++;
+		}
+		System.out.println();
+		height++;
+	}
+	
 }
+public static void rectB() {
+	char l = 'Б';
+	int height = 0;
+	while (height<10) {
+		int width =0;
+		if (height==0||height==9) {
+			while(width<20) {
+				System.out.print(l);
+				width++;
+			}
+		}
+		while (width<20) {
+			if(width==0||width==19) {
+				System.out.print(l);}
+		else {System.out.print(" ");}
+			width++;		}
+		System.out.println();
+		height++;
+}
+}}
 public class MyJavaLearning {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //System.out.println(App.normalizeUrl("HateifsReality"));//50/62
-        //System.out.println(App.isPalindrome("AMA"));
-        //System.out.println(App.getNumberExplanation(0));
-        //System.out.println(App.getNumberExplanation(42));
-        //System.out.println(App.getNumberExplanation(666));
-    	//App.printNumbers(5);
-    	//System.out.println(App.encrypt("attack"));
-    	App.withscanner();
+
+    	App.rectB();
     }
     
 }
