@@ -114,19 +114,7 @@ public class MyJavaLearning {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-<<<<<<< HEAD
 
-    	App.rectB();
-=======
-        //System.out.println(App.normalizeUrl("HateifsReality"));//50/62
-        //System.out.println(App.isPalindrome("AMA"));
-        //System.out.println(App.getNumberExplanation(0));
-        //System.out.println(App.getNumberExplanation(42));
-        //System.out.println(App.getNumberExplanation(666));
-    	//App.printNumbers(5);
-    	//System.out.println(App.encrypt("attack"));
-    	//App.withscanner();
->>>>>>> branch 'master' of https://github.com/Veselovnd88/MyJavaLearn.git
     }
     
 }
