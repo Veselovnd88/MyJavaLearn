@@ -52,12 +52,33 @@ public class Javarush24 {
 		
 		
 	}
+	public static void maximum() {
+		//В этой задаче тебе нужно: 
+		//1. Ввести с клавиатуры число N. 2. Считать N целых чисел и заполнить ими массив array.
+		//3. Найти максимальное число среди элементов массива.
+		Scanner scanner = new Scanner(System.in);
+		int ops = scanner.nextInt();
+		int[] myarr = new int[ops];
+		for (int i=0; i<ops;i++) {
+			myarr[i] = scanner.nextInt();
+			
+		}scanner.close();
+		int max = myarr[0];
+		for (int num:myarr) {
+			if (num>=max) {
+				max = num;
+			}
+		} System.out.println(max);
+		
+		
+		
+	}
 	
 	
 	public static void main(String[] args) {
 		//  2 уровень,  4 лекция
 		//reverse();
-		minimum();
+		maximum();
 	}
 
 }
