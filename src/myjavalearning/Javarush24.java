@@ -1,6 +1,6 @@
 package myjavalearning;
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class Javarush24 {
 
 	public static void reverse() {
@@ -73,12 +73,40 @@ public class Javarush24 {
 		
 		
 	}
-	
+	public static void deleteequalsstr() {
+		//ava Syntax Zero,  2 уровень,  5 лекция
+		/*В этой задаче тебе нужно: 1. Считать 6строк и заполнить ими массив strings.
+		 *  2. Удалить повторяющиеся строки из массива strings, заменив их на null (null
+		 *   должны быть не строками "null"). Примеры. 1. Массив после чтения строк:
+		 *    {"Hello", "Hello", "World", "Java", "Tasks", "World"} 2. Массив после уд
+		 */
+		Scanner scanner = new Scanner(System.in);
+		int qnt_ops = 6;
+		String[] strings = new String[6];
+		for (int i = 0; i<qnt_ops;i++) {
+			strings[i] = scanner.nextLine();
+		}
+		for(int j = 0; j<qnt_ops-1;j++) {
+			
+				for(int k=j+1;k<qnt_ops;k++) {
+					if(strings[k]!=null&&strings[j]!=null) {
+					if(strings[j].equals(strings[k])) {
+						strings[k]=null;
+					}}
+				
+			}
+		}
+
+		
+		System.out.print(Arrays.toString(strings));
+		scanner.close();
+	}
 	
 	public static void main(String[] args) {
 		//  2 уровень,  4 лекция
 		//reverse();
-		maximum();
+		//maximum();
+		deleteequalsstr();
 	}
 
 }
