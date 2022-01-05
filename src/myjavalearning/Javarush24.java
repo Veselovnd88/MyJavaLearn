@@ -126,13 +126,27 @@ public class Javarush24 {
 		}
 		
 	}
+	public static void twodimsarray() {
+		Scanner scanner = new Scanner(System.in);
+		int row = scanner.nextInt();
+		int[][] myarr = new int[row][];
+		for (int i=0; i<row;i++) {
+			int val = scanner.nextInt();
+			myarr[i] = new int[val];
+			for (int j=0; j<val;j++) {
+				System.out.print("[]");
+			}
+		}System.out.println();
+		
+	}
 	public static void main(String[] args) {
 		//  2 уровень,  4 лекция
 		//reverse();
 		//maximum();
 		//deleteequalsstr();
 		//multiplytable();
-		trianglearray();
+		//trianglearray();
+		twodimsarray();
 	}
 
 }
