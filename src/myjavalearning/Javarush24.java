@@ -111,12 +111,28 @@ public class Javarush24 {
 		}
 		
 	}
+	public static void trianglearray() {
+		int[][] myarr = new int[10][];
+		for (int i=0; i<10;i++) {
+			myarr[i]=new int[i+1];
+			//System.out.println(myarr[i].length);
+		}
+		for(int x=0; x<myarr.length; x++) {
+			for(int y=0;y<myarr[x].length;y++) {
+				myarr[x][y] = x+y;
+				System.out.print(myarr[x][y]+" ");
+			}
+			System.out.println();
+		}
+		
+	}
 	public static void main(String[] args) {
 		//  2 уровень,  4 лекция
 		//reverse();
 		//maximum();
 		//deleteequalsstr();
 		//multiplytable();
+		trianglearray();
 	}
 
 }
