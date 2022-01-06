@@ -151,16 +151,55 @@ public class Javarush24 {
 						{4, 5}}
 			};
 			
-			for (int i = 0; i<multiArray.length; i++) {
-				for(int j=0; j<multiArray[i].length;j++) {
-					for(int k=0;k<multiArray[i][j].length;k++) {
-						System.out.print(multiArray[i][j][k]+" ");
+			//for (int i = 0; i<multiArray.length; i++) {
+				//for(int j=0; j<multiArray[i].length;j++) {
+					//System.out.print(Arrays.toString(multiArray[i][j]));
+					//for(int k=0;k<multiArray[i][j].length;k++) {
+					//	System.out.print(multiArray[i][j][k]+" ");
 						
-					}System.out.println();
-				}System.out.println();
-			}
+					//}System.out.println();
+				//}System.out.println();
+			//}
+					System.out.print(Arrays.deepToString(multiArray));
 	}
-	public static void main(String[] args) {
+public static void fillarr() {
+	/*Заполняем массив*/
+	int[] myarr = new int[11];
+    int valueStart = 10;
+    int valueEnd = 13;
+	if(myarr.length%2==0) {
+		Arrays.fill(myarr,0,myarr.length/2,valueStart);
+		Arrays.fill(myarr,myarr.length/2,myarr.length,valueEnd);}
+		
+		else {
+			Arrays.fill(myarr,0,myarr.length/2+1,valueStart);
+			Arrays.fill(myarr,myarr.length/2+1,myarr.length,valueEnd);
+		}
+		System.out.print(Arrays.toString(myarr));
+	
+}
+public static void dividearr() {
+	/* 
+	Делим массив
+	*/
+	int[][] result = new int[2][];
+    int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+    if(array.length%2==0) {
+    	result[0] = Arrays.copyOfRange(array, 0, array.length/2);
+    	result[1] = Arrays.copyOfRange(array, array.length/2,array.length);
+    }
+    else {
+    	result[0] = Arrays.copyOfRange(array, 0, array.length/2+1);
+    	result[1] = Arrays.copyOfRange(array, array.length/2+1,array.length);
+    	
+    }
+    System.out.print(Arrays.deepToString(result));
+    
+	
+	
+}
+
+public static void main(String[] args) {
 		//  2 уровень,  4 лекция
 		//reverse();
 		//maximum();
@@ -168,6 +207,8 @@ public class Javarush24 {
 		//multiplytable();
 		//trianglearray();
 		//multyarr();
+		//fillarr();
+	dividearr();
 	}
 
 }
