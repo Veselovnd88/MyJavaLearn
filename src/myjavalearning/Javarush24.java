@@ -150,6 +150,15 @@ public class Javarush24 {
 						{1}, {2}, {3},
 						{4, 5}}
 			};
+			
+			for (int i = 0; i<multiArray.length; i++) {
+				for(int j=0; j<multiArray[i].length;j++) {
+					for(int k=0;k<multiArray[i][j].length;k++) {
+						System.out.print(multiArray[i][j][k]+" ");
+						
+					}System.out.println();
+				}System.out.println();
+			}
 	}
 	public static void main(String[] args) {
 		//  2 уровень,  4 лекция
@@ -158,7 +167,7 @@ public class Javarush24 {
 		//deleteequalsstr();
 		//multiplytable();
 		//trianglearray();
-		twodimsarray();
+		//multyarr();
 	}
 
 }
