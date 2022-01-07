@@ -2,7 +2,7 @@ package myjavalearning;
 
 import java.time.LocalDate;
 import java.time.Period;
-
+import static java.lang.Math.min;
 class Car{
 	public Car(){}// default constructor
 	public Car(String name){
@@ -15,6 +15,7 @@ class Car{
 		setEngineState(eng);
 
 	}
+	private static final int MAX_SPEED=110;
 	private String name;
 	public void setPressure(int...pressures) {
 		int i;
@@ -40,11 +41,9 @@ class Car{
 			if (speed<0) {
 				System.out.println("Speed can't be negative, please try again, Speed set to Zero");
 				this.speed = 0;}
-			else if (speed>=300) {
-				System.out.println("Speed is too high, dial is out of range, show my maximum");
-				this.speed = 300;}
-			else {
-				this.speed = speed;}
+			else {this.speed = min(speed, MAX_SPEED);
+				
+			}
 	//}
 		//else{
 			//if (!engineState) {			
@@ -97,7 +96,7 @@ public class Cars {
 		Car car_one = new Car();
 		car_one.setOdo(143);
 		System.out.println(car_one.getOdo());
-		Car car2 = new Car("Crazy",60,100,true);
+		Car car2 = new Car("Crazy",70,100,true);
 		System.out.println(car2.getSpeed());
 		System.out.printf("%s car moves with speed %d and fuel level %d litres %n",car2.getName(),
 				car2.getSpeed(), car2.getGasoline());

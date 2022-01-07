@@ -1,12 +1,12 @@
 package myjavalearning;
 
 public class Box {
-	public Box(double h, double w, double l) {
+	public Box(double h, double w, double l) {// constructor with 3 params
 		setHeight(h);
 		setWidth(w);
 		setLength(l);
 	}
-	public Box(double a) {
+	public Box(double a) { //construsuctor with 1 param, inside we invoke first constutor for reuse the code.
 		this(a,a,a);//creating a cube
 	}
 	
