@@ -4,7 +4,9 @@ import java.time.LocalDate;
 import java.time.Period;
 import static java.lang.Math.min;
 class Car{
-	public Car(){}// default constructor
+	public Car(){
+		setGasoline(10);
+	}// default constructor
 	public Car(String name){
 		this(name,0,0,false);}
 	
@@ -98,10 +100,11 @@ public class Cars {
 		System.out.println(car_one.getOdo());
 		Car car2 = new Car("Crazy",70,100,true);
 		System.out.println(car2.getSpeed());
+		Car car3 = new Car();
+		
 		System.out.printf("%s car moves with speed %d and fuel level %d litres %n",car2.getName(),
 				car2.getSpeed(), car2.getGasoline());
-		
-		/*
+		System.out.printf("Car with %d gasoline %n", car3.getGasoline())	;/*
 		 * 
 		 * 
 		 * car_one.setName("Vasya"); car_one.setManufactured(LocalDate.of(1900,01,01));
