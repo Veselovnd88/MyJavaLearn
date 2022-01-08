@@ -2,9 +2,13 @@ package myjavalearning;
 
 public class Box {
 	public Box(double h, double w, double l) {// constructor with 3 params
-		setHeight(h);
-		setWidth(w);
-		setLength(l);
+		if (h>0){
+		setHeight(h);}
+		else{setHeight(1.0);};
+		if (w>0) {setWidth(w);}
+		else {setWidth(1.0);}
+		if(l<0) {setLength(l);}
+		else {setLength(1.0);}
 	}
 	public Box(double a) { //construsuctor with 1 param, inside we invoke first constutor for reuse the code.
 		this(a,a,a);//creating a cube
@@ -36,48 +40,39 @@ public class Box {
 	private double width;
 	private double length;
 	
-	/**
-	 * @return the height
-	 */
 	public double getHeight() {
 		return height;
 	}
-	/**
-	 * @param height the height to set
-	 */
+	
 	public void setHeight(double height) {
-		this.height = height;
+		if (height>0) {
+		this.height = height;}
+		else {
+			System.out.println("Height must be greater than 0");
+		}
 	}
-	/**
-	 * @return the width
-	 */
+	
 	public double getWidth() {
 		return width;
 	}
-	/**
-	 * @param width the width to set
-	 */
+
 	public void setWidth(double width) {
-		this.width = width;
+		if (width>0) {
+		this.width = width;}
+		else {
+			System.out.println("Height must greater than 0");
+		}
 	}
-	/**
-	 * @return the length
-	 */
+	
 	public double getLength() {
 		return length;
 	}
-	/**
-	 * @param length the length to set
-	 */
-	public void setLength(double length) {
-		this.length = length;
-	}
 	
-	public static void main(String[] args) {
-		
-		Box box1 = new Box(5);
-		box1.printBox();
-		System.out.println(box1.getSurfaceArea());
-		
+	public void setLength(double length) {
+		if (length>0) {
+		this.length = length;}
+		else {
+			System.out.println("Length must be greater than 0");
+		}
 	}
-}
+	}
