@@ -1,5 +1,5 @@
 package com.javaoo.calculators;
-
+import java.lang.Math;
 public class ScientificCalculator {
 
 	public static final double PI = 3.14159;
@@ -11,11 +11,11 @@ public class ScientificCalculator {
 	public final void putValueInMemory(double holdValue) {// чтобы не могли переобределить метод
 		this.holdValue = holdValue;
 	}
-	public final static double exp(double a) {
-		return(0);
+	public final double exp(double a) {
+		return  Math.exp(a);
 	}
-	public final static double log(double a) {
-		return(0);
+	public final double log(double a) {
+		return Math.log(a);
 	}
 	
 	

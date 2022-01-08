@@ -17,7 +17,7 @@ public class BasicCalculator {
 
 
 	public static void main(String[] args) {
-		//System.out.println(add(6.0,5.1));
+		
 	}
 
 }
