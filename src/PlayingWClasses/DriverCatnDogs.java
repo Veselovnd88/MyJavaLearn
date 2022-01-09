@@ -19,6 +19,24 @@ public class DriverCatnDogs {
 				fatCat.getColor());
 		System.out.printf("%s lives in %s and has %s color%n",superCat.getName(),superCat.getAddress(),
 				superCat.getColor());
+	
+		Dog sharik = new Dog("Sharik",100,"Black");
+		sharik.bark();
+		Dog evil = new Dog("Evil");
+		evil.bark();
+		System.out.println(Cat.getCatCount());
+		//System.out.println(ConsoleReader.stringReader());
+		//System.out.println(StringHelper.multyply("petya"));
+		for(Cat c: Cat.cats) {
+			System.out.println(c.getName());
+		}
+		FamilyCat dedushka = new FamilyCat("Desuhka Vaska", null,null);
+		FamilyCat babusha = new FamilyCat("Babushka Murka", null, null);
+		FamilyCat father = new FamilyCat("Papa Murzik",babusha,null);
+		FamilyCat mother = new FamilyCat("Mama Pupa",null, dedushka );
+		FamilyCat son = new FamilyCat("Small Boy",mother,father);
+		FamilyCat daughter = new FamilyCat("Small girl", mother, father);
+		FamilyCat.printCats();
 	}
 
 }

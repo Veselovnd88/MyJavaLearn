@@ -1,5 +1,5 @@
 package PlayingWClasses;
-
+import java.util.ArrayList;
 public class Cat {
 	
 	Cat(String name,int age, String color, int weight, int strength, String address){
@@ -9,21 +9,34 @@ public class Cat {
 		setStrength(strength);
 		setColor(color);
 		setAddress(address);
+		catCount++;
+		cats.add(this);
+		System.out.println(catCount+ " cats created");
 	}
 	Cat(String name){
-		this(name,5,"Grey",5,5,"Unknown");
+		this(name,AVG_AGE,"Grey",AVG_WEIGHT,AVG_STRENGTH,null);
 	}
 	Cat(String name, int age,int weight){
-		this(name,age,"Grey",weight,5, "Unknown");
+		this(name,age,"Grey",weight,AVG_STRENGTH, "");
 	}
 	Cat(String name, int age, String color,int weight){
-		this(name,age,color,weight,5,"Uknown");
+		this(name,age,color,weight,AVG_STRENGTH,null);
 	}
-	
+	public boolean fight (Cat anotherCat) {
+		return (this.weight+this.strength)> (anotherCat.weight+anotherCat.strength);
+	}
+	protected void finalize() throws Throwable{
+		//System.out.println("Object "+ name+" destroyed");
+	catCount--;
+	System.out.println(catCount+" cats left");
+	}
+	public static ArrayList<Cat> cats=new ArrayList<Cat>();
+	private static int catCount=0;
 	private String name;
 	private String color;
-	
-
+	private final  static int AVG_AGE = 5;
+	private final static int AVG_WEIGHT = 3;
+	private final static int AVG_STRENGTH = 5;
 	private String address;
 	private int age;
 	private int weight;
@@ -33,8 +46,12 @@ public class Cat {
 		return name;
 	}
 	public void setName(String name) {
-		this.name = name;//TODO если имя пустая строка - то передавать нулл
-	}
+		if(name=="" || name==null) {
+			this.name=null;
+		}
+		else {
+		this.name = name;
+	}}
 	public int getAge() {
 		return age;
 	}
@@ -71,10 +88,18 @@ public class Cat {
 		return address;
 	}
 	public void setAddress(String address) {
-		this.address = address;//TODO если адрес пустой - то передавать нулл
+		if(address=="" || address==null) {
+			this.address=null;
+		}
+		else {
+		this.address = address;}
 	}
-	public boolean fight (Cat anotherCat) {
-		return (this.weight+this.strength)> (anotherCat.weight+anotherCat.strength);
+	public static int getCatCount() {
+		return catCount;
 	}
+	/*public static void setCatCount(int catCount) {
+		Cat.catCount = catCount;
+	}*/
+	
 
 }
