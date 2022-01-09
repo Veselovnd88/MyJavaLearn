@@ -35,7 +35,10 @@ public class DriverCatnDogs {
 		FamilyCat father = new FamilyCat("Papa Murzik",babusha,null);
 		FamilyCat mother = new FamilyCat("Mama Pupa",null, dedushka );
 		FamilyCat son = new FamilyCat("Small Boy",mother,father);
+		System.out.println(son.getClass());
+		
 		FamilyCat daughter = new FamilyCat("Small girl", mother, father);
+		System.out.println(daughter.getClass());
 		FamilyCat.printCats();
 	}
 

@@ -1,4 +1,4 @@
-package myjavalearning;
+package ru.learnquest.transport;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -17,7 +17,7 @@ public class Car{
 		setEngineState(eng);
 
 	}
-	private static final int MAX_SPEED=110;
+	private static final int MAX_SPEED=350;
 	private String name;
 	public void setPressure(int...pressures) {
 		

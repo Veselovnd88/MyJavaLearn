@@ -2,7 +2,9 @@ package myjavalearningApp;
 
 import java.time.LocalDate;
 
-import myjavalearning.Car;
+import ru.learnquest.transport.Car;
+import ru.learnquest.transport.SportCar;
+import ru.learnquest.transport.StationWagon;
 
 public class CarApp{
 	public static void main(String[] args) {
@@ -13,13 +15,18 @@ public class CarApp{
 				 int[] {10,2000,30,100,0,-5,-100,250}; for(int sp:speedlist) {
 				 car_one.setSpeed(sp);
 		System.out.println(car_one.getOdo());
-		Car car2 = new Car("Crazy",70,100,true);
+		Car car2 = new SportCar("Crazy",250,100,true);
 		System.out.println(car2.getSpeed());
 		Car car3 = new Car();
 		
-		System.out.printf("%s car moves with speed %d and fuel level %d litres %n",car2.getName(),
-				car2.getSpeed(), car2.getGasoline());
+		
 		System.out.printf("Car with %d gasoline %n", car3.getGasoline())	;
-
+		StationWagon wagon = new StationWagon("HateWagon");
+		wagon.setManufactured(LocalDate.of(2001, 8, 9));
+		wagon.setCargoLoad(500);
+		wagon.setSpeed(75);
+		for (Car car:new Car[] {car_one,car2,car3,wagon}) {
+		System.out.printf("%s car moves with speed %d and fuel level %d litres %n",car.getName(),
+				car.getSpeed(), car.getGasoline());}
 }}
 }
