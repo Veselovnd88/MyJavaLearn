@@ -9,14 +9,16 @@ public class DriverCatnDogs {
 	}
 
 	public static void main(String[] args) {
-		// TODO создать 3 экзсемпляра Cat
-		// TODO провести 3 боя
-		Cat fatCat = new Cat("Fatty",13,20,10);
-		Cat superCat = new Cat("Trayny", 5,10, 25 );
-		Cat youngCat = new Cat("Kitty", 1,3,10);
+		Cat fatCat = new Cat("Fatty",13,"Red",20,10,"Baker Street");
+		Cat superCat = new Cat("Trayny");
+		Cat youngCat = new Cat("Kitty",5,"Black",7);
 		fightingCat(fatCat,superCat);
 		fightingCat(fatCat,youngCat);
 		fightingCat(youngCat,superCat);
+		System.out.printf("%s lives in %s and has %s color%n",fatCat.getName(),fatCat.getAddress(),
+				fatCat.getColor());
+		System.out.printf("%s lives in %s and has %s color%n",superCat.getName(),superCat.getAddress(),
+				superCat.getColor());
 	}
 
 }
