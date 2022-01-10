@@ -1,8 +1,9 @@
 package ru.learnquest.transport;
 
-public class StationWagon extends Car {
+public class StationWagon extends Cargo {
 
 	public StationWagon() {
+		super();
 	}
 
 	public StationWagon(String name) {
@@ -11,18 +12,6 @@ public class StationWagon extends Car {
 
 	public StationWagon(String name, int newspeed, int fuel, boolean eng) {
 		super(name, newspeed, fuel, eng);
-	}
-		public void setCargoLoad(int cargoLoad) {
-		this.cargoLoad = cargoLoad;
-	}
-	
-	
-	private int cargoCapacity;
-	private int cargoLoad;
-	
-	@Override
-	public void setSpeed(int speed) {
-		super.setSpeed(speed = cargoLoad/100);
 	}
 
 }
