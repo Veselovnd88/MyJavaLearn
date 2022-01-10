@@ -5,6 +5,8 @@ import java.time.LocalDate;
 import ru.learnquest.transport.Car;
 import ru.learnquest.transport.SportCar;
 import ru.learnquest.transport.StationWagon;
+import ru.learnquest.transport.sUV;
+import ru.learnquest.transport.Cargo;
 
 public class CarApp{
 	public static void main(String[] args) {
@@ -25,7 +27,10 @@ public class CarApp{
 		wagon.setManufactured(LocalDate.of(2001, 8, 9));
 		wagon.setCargoLoad(500);
 		wagon.setSpeed(75);
-		for (Car car:new Car[] {car_one,car2,car3,wagon}) {
+		sUV mysuv = new sUV("SUV");
+		mysuv.setCargoLoad(1000);
+		mysuv.setSpeed(100);
+		for (Car car:new Car[] {car_one,car2,car3,wagon,mysuv}) {
 		System.out.printf("%s car moves with speed %d and fuel level %d litres %n",car.getName(),
 				car.getSpeed(), car.getGasoline());}
 }}

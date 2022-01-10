@@ -8,6 +8,7 @@ public class Cargo extends Car {
 		super(name);
 	}
 	public Cargo(String name, int newspeed, int fuel, boolean eng) {
+
 		super(name, newspeed, fuel, eng);
 	}
 	private int cargoCapacity;
