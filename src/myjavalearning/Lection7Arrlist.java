@@ -64,11 +64,42 @@ public class Lection7Arrlist {
 		}
 		sc.close();
 	}
+
+	public static void task6() {
+		Scanner sc = new Scanner(System.in);
+		ArrayList<Integer> ml = new ArrayList<Integer>();
+		for (int i=0;i<10;i++) {
+			ml.add(sc.nextInt());
+		}
+		ArrayList<Integer> leven = new ArrayList<Integer>();
+		ArrayList<Integer> lodd = new ArrayList<Integer>();
+		ArrayList<Integer> lother = new ArrayList<Integer>();
+		
+		for (int c:ml) {
+			if(c%2==0) {
+				leven.add(c);
+			}
+			if(c%3==0) {
+				lodd.add(c);
+			}
+			if(c%2!=0 &&c%3!=0) {
+				lother.add(c);
+			}
+		}sc.close();
+		printList(leven);
+		printList(lodd);
+	}
+	public static void printList(ArrayList<Integer> l) {
+		for (int i: l) {
+			System.out.println(i);
+		}
+	}
 	public static void main(String[] args) {
 		//task1();
 		//task2();
 		//task4();
 		//task5();
+		//task6();
 
 	}
 
