@@ -89,6 +89,31 @@ public class Lection7Arrlist {
 		printList(leven);
 		printList(lodd);
 	}
+	public static void task7() {
+		Scanner sc = new Scanner(System.in);
+		ArrayList<String> ml = new ArrayList<String>();
+		for (int i=0;i<5;i++) {
+			ml.add(sc.nextLine());	
+		}
+		ml.remove(2);
+		for(int j=ml.size()-1;j>=0;j--) {
+			System.out.println(ml.get(j));
+		}
+		sc.close();
+	}
+	public static void task8() {
+		ArrayList<String> l = new ArrayList<String>();
+		l.add("Мама");
+		l.add("мыла");
+		l.add("раму");
+		String ad = "именно";
+		for(int i=0;i<l.size();i+=2) {
+			l.add(i+1,ad);
+		}
+		for(String c:l) {
+			System.out.print(c+" ");
+		}
+	}
 	public static void printList(ArrayList<Integer> l) {
 		for (int i: l) {
 			System.out.println(i);
@@ -100,7 +125,8 @@ public class Lection7Arrlist {
 		//task4();
 		//task5();
 		//task6();
-
+		//task7();
+task8();
 	}
 
 }
