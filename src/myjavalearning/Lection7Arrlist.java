@@ -114,19 +114,43 @@ public class Lection7Arrlist {
 			System.out.print(c+" ");
 		}
 	}
+	public static void task9fix(ArrayList<String>mylist) {
+		int dim = mylist.size();
+		for(int i = 0; i<dim;i++) {
+			if (mylist.get(i).contains("р")&& !mylist.get(i).contains("л")) {
+				mylist.remove(i);
+				dim--;
+				//System.out.println("Im here");
+			}
+			else if(mylist.get(i).contains("л")&& !mylist.get(i).contains("р")) {
+				mylist.add(mylist.get(i));
+				//System.out.println("and here");
+			}
+		}
+		for(String c:mylist) {
+			System.out.println(c);
+		}
+	}
 	public static void printList(ArrayList<Integer> l) {
 		for (int i: l) {
 			System.out.println(i);
 		}
 	}
 	public static void main(String[] args) {
+		String[] arrstr = new String[] {"лолик","ррррр","тролик","петрол","пушка"};
+		ArrayList<String> task9 = new ArrayList<String>();
+		for(String c:arrstr) {
+			task9.add(c);
+		}
+		
 		//task1();
 		//task2();
 		//task4();
 		//task5();
 		//task6();
 		//task7();
-task8();
+//task8();
+		task9fix(task9);
 	}
 
 }
