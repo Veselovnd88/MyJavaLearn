@@ -2,13 +2,10 @@ package myjavalearning;
 
 public class Box {
 	public Box(double h, double w, double l) {// constructor with 3 params
-		if (h>0){
-		setHeight(h);}
-		else{setHeight(1.0);};
-		if (w>0) {setWidth(w);}
-		else {setWidth(1.0);}
-		if(l<0) {setLength(l);}
-		else {setLength(1.0);}
+
+		setHeight(Math.max(1.0,h));
+		setWidth(Math.max(1.0,2));
+		setLength(Math.max(1.0,l));
 	}
 	public Box(double a) { //construsuctor with 1 param, inside we invoke first constutor for reuse the code.
 		this(a,a,a);//creating a cube
@@ -49,6 +46,7 @@ public class Box {
 		this.height = height;}
 		else {
 			System.out.println("Height must be greater than 0");
+			
 		}
 	}
 	
@@ -61,6 +59,7 @@ public class Box {
 		this.width = width;}
 		else {
 			System.out.println("Height must greater than 0");
+			
 		}
 	}
 	
@@ -73,6 +72,7 @@ public class Box {
 		this.length = length;}
 		else {
 			System.out.println("Length must be greater than 0");
+			
 		}
 	}
 	}
