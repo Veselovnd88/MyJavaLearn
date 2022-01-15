@@ -29,11 +29,17 @@ public class Cube extends Box {
 		super.setLength(length);}
 	}
 	
+	
+	
 	public void setSide(double s) {
-			System.out.println("Height must be greater than 0");
+			if (s<=0) {
+			System.out.println("Side must be greater than 0");}
+			else {
 			super.setHeight(Math.max(1.0, s));
 			super.setWidth(Math.max(1.0, s));
-			super.setLength(Math.max(1.0, s));}
+			super.setLength(Math.max(1.0, s));
+			}}
+
 
 	public double getSide() {
 		return super.getHeight();
