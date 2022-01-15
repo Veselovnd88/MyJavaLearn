@@ -15,7 +15,7 @@ public class Car{
 		setSpeed(newspeed);
 		setGasoline(fuel);
 		setEngineState(eng);
-
+//
 	}
 	private static final int MAX_SPEED=110;
 	private String name;
