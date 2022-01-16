@@ -11,7 +11,12 @@ public abstract class PressureDevice extends Device {
 
 	private double range;
 	private String connection;
-	
+	public double measure() {
+		if (super.getInstall()) {
+			return (super.getWeight()*70/range);
+		}
+		else return 0;
+	}
 	public double getRange() {
 		return range;
 	}

@@ -16,6 +16,14 @@ public abstract class Device {
 	private String type;
 	private String article;
 	private Calendar produced;
+	private boolean isInstalled;
+	
+	public void install(boolean status) {
+		this.isInstalled = status;
+	}
+	public boolean getInstall() {
+		return isInstalled;
+	}
 	
 	public double getWeight() {
 		return weight;

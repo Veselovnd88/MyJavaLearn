@@ -46,17 +46,8 @@ public class Car{
 			else {this.speed = min(speed, MAX_SPEED);
 				
 			}
-	//}
-		//else{
-			//if (!engineState) {			
-			//System.out.println("Please, start engine");
-			//this.speed = 0;}
-			//else {
-			//	if (gasoline<=0) {
-			//	System.out.println("Need more fuel");
-			//	this.speed = 0;
-			//}
-		//}//}
+
+
 		}
 	public int getGasoline() {
 		return gasoline;
