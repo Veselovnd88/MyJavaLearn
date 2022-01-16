@@ -7,4 +7,18 @@ public class PressureTransducer extends PressureDevice {
 		
 	}
 
+	@Override
+	public double measure() {
+		if (super.getInstall()) {
+			return (super.getWeight()*90/super.getRange());
+		}
+		else return 0;
+	}
+
+	@Override
+	public double checkOverpressure() {
+		return super.getRange()*3;
+	}
+	
+
 }
