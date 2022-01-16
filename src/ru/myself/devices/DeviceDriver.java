@@ -25,8 +25,10 @@ public class DeviceDriver {
 		MeasuringDevice[] arr2 = new MeasuringDevice[2];
 		arr2[0] = pt1;
 		arr2[1] = pt2;
+		pt1.setCurrentValue(100.0);
+		MeasuringDevice.setToZero(pt1);
 		for(MeasuringDevice md:arr2) {
-			System.out.printf("Mesurement: %f%n", ((PressureDevice) md).measure());
+			System.out.printf("Mesurement: %f%n", ((PressureDevice) md).getCurrentValue());
 			System.out.printf("Overpressure: %f%n", ((PressureDevice) md).checkOverpressure());
 		}
 		

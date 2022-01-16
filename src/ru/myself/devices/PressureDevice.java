@@ -1,7 +1,7 @@
 package ru.myself.devices;
 
 public abstract class PressureDevice extends Device implements MeasuringDevice {
-	
+	private double currentValue;
 	public PressureDevice(String type, String article,double weight, double range, String conn){
 		super(type,article,weight);
 		setRange(range);
@@ -14,8 +14,13 @@ public abstract class PressureDevice extends Device implements MeasuringDevice {
 	public double checkOverpressure() {
 		return range*1.3;
 	}
-	
-	public double measure() {
+	public void setCurrentValue(double value) {
+		this.currentValue = value;
+	}
+	public double getCurrentValue() {
+		return currentValue;
+	}
+	public double measureTest() {
 		if (super.getInstall()) {
 			return (super.getWeight()*70/range);
 		}
