@@ -12,16 +12,24 @@ public class DeviceDriver {
 		myarr[1] = pt2;
 		pt1.install(true);
 		
-		for (Device d :myarr) {
-		if (d!=null) {
-			d.install(true);
-		System.out.printf("%s%nInstallation status: %s%n"
-				, d, d.getInstall());
-		if(d instanceof PressureDevice) {
-			System.out.printf("Mesurement: %f%n", ((PressureDevice) d).measure());
-			System.out.printf("Overpressure: %f%n", ((PressureDevice) d).checkOverpressure());
+//		for (Device d :myarr) {
+//		if (d!=null) {
+//			d.install(true);
+//		System.out.printf("%s%nInstallation status: %s%n"
+//				, d, d.getInstall());
+//		if(d instanceof PressureDevice) {
+//			System.out.printf("Mesurement: %f%n", ((PressureDevice) d).measure());
+//			System.out.printf("Overpressure: %f%n", ((PressureDevice) d).checkOverpressure());
+//		}
+//	}}
+		MeasuringDevice[] arr2 = new MeasuringDevice[2];
+		arr2[0] = pt1;
+		arr2[1] = pt2;
+		for(MeasuringDevice md:arr2) {
+			System.out.printf("Mesurement: %f%n", ((PressureDevice) md).measure());
+			System.out.printf("Overpressure: %f%n", ((PressureDevice) md).checkOverpressure());
 		}
-	}}
+		
 	}
 
 }

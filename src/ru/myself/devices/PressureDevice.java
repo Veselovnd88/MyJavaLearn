@@ -1,6 +1,6 @@
 package ru.myself.devices;
 
-public abstract class PressureDevice extends Device {
+public abstract class PressureDevice extends Device implements MeasuringDevice {
 	
 	public PressureDevice(String type, String article,double weight, double range, String conn){
 		super(type,article,weight);
@@ -14,6 +14,7 @@ public abstract class PressureDevice extends Device {
 	public double checkOverpressure() {
 		return range*1.3;
 	}
+	
 	public double measure() {
 		if (super.getInstall()) {
 			return (super.getWeight()*70/range);
