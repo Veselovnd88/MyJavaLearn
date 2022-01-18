@@ -9,9 +9,12 @@ public class DriverCatnDogs {
 	}
 
 	public static void main(String[] args) {
-		Selectable f = new Food();
-		f.onSelect();
-		((Food) f).eat();
+		System.out.println(
+		Singletone.getInstance("Moon").getName());
+		System.out.println(
+				Singletone.getInstance("Sun").getName());
+		
+
 //		Cat fatCat = new Cat("Fatty",13,"Red",20,10,"Baker Street");
 //		Cat superCat = new Cat("Trayny");
 //		Cat youngCat = new Cat("Kitty",5,"Black",7);
