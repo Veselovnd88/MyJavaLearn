@@ -2,14 +2,6 @@ package myjavalearning;
 
 public abstract class Shape {
 	
-	public Shape(String color, String name) {
-		setColor(color);
-		setName(name);
-	}
-	
-	
-	
-	
 	private String color;
 	private String name;
 	public String getColor() {

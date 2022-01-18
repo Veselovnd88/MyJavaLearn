@@ -1,6 +1,6 @@
 package myjavalearning;
 
-public class Box {
+public class Box extends Shape implements ThreeDimensional {
 	public Box(double h, double w, double l) {// constructor with 3 params
 
 		setHeight(Math.max(1.0,h));
