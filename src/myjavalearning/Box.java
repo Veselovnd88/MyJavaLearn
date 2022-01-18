@@ -2,7 +2,8 @@ package myjavalearning;
 
 public class Box extends Shape implements ThreeDimensional {
 	public Box(double h, double w, double l) {// constructor with 3 params
-
+		setName("Unknown");
+		setColor("White");
 		setHeight(Math.max(1.0,h));
 		setWidth(Math.max(1.0,2));
 		setLength(Math.max(1.0,l));
@@ -74,5 +75,17 @@ public class Box extends Shape implements ThreeDimensional {
 			System.out.println("Length must be greater than 0");
 			
 		}
+	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Box [height=");
+		builder.append(height);
+		builder.append(", width=");
+		builder.append(width);
+		builder.append(", length=");
+		builder.append(length);
+		builder.append("]");
+		return builder.toString();
 	}
 	}

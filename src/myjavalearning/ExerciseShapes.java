@@ -10,7 +10,7 @@ public class ExerciseShapes {
 		s[4] = new Cube(6.8);
 		s[5] = new Cube(3.5);
 		s[6] = new Box(3.5,4.5,5.5);
-		s[7] = new Box(4.5,5.5,6.5);
+		s[7] = new Circle(5);
 		
 		TwoDimensional[] arr2 = new TwoDimensional[3];
 		arr2[0] = new Circle(5);
@@ -18,13 +18,13 @@ public class ExerciseShapes {
 		arr2[2] = new Square(666);
 		
 		for (Shape sh:s) {
-			sh.setColor("Black");
+			System.out.println(sh);
 			//System.out.println(sh.getColor());
 		}
-		for (TwoDimensional t:arr2) {
-			System.out.println(t.getArea());
-			System.out.println(t.getPerimeter());
-		}
+//		for (TwoDimensional t:arr2) {
+//			System.out.println(t.getArea());
+//			System.out.println(t.getPerimeter());
+//		}
 //		for (Shape sh:s) {
 //			ThreeDimensional temp = (ThreeDimensional) sh;
 //			System.out.println(temp.getVolume());

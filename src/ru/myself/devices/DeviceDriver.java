@@ -1,5 +1,8 @@
 package ru.myself.devices;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class DeviceDriver {
 
 
@@ -25,6 +28,9 @@ public class DeviceDriver {
 		MeasuringDevice[] arr2 = new MeasuringDevice[2];
 		arr2[0] = pt1;
 		arr2[1] = pt2;
+		List<MeasuringDevice> mylist = Arrays.asList(pt1,pt2);
+		mylist.forEach(MeasuringDevice::setToZero);
+		
 		pt1.setCurrentValue(100.0);
 		MeasuringDevice.setToZero(pt1);
 		for(MeasuringDevice md:arr2) {

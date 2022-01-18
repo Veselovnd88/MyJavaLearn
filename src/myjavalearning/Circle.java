@@ -28,4 +28,14 @@ public class Circle extends Shape implements TwoDimensional {
 	public double getPerimeter() {
 		return 2*Math.PI*radius;
 	}
+
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Circle [radius=");
+		builder.append(radius);
+		builder.append("]");
+		return builder.toString();
+	}
 }

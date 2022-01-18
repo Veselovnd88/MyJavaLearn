@@ -42,5 +42,15 @@ public class Rectangle extends Shape implements TwoDimensional {
 	public void setWidth(double width) {
 		this.width = width;
 	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Rectangle [length=");
+		builder.append(length);
+		builder.append(", width=");
+		builder.append(width);
+		builder.append("]");
+		return builder.toString();
+	}
 
 }
