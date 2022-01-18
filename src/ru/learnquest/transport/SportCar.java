@@ -14,7 +14,7 @@ public class SportCar extends Car {
 
 	@Override
 	public void setSpeed(int speed) {
-		// TODO Auto-generated method stub
+	
 		super.setSpeed((int)(speed*1.10));
 	}
 
