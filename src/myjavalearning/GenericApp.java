@@ -28,13 +28,15 @@ public class GenericApp {
 	}
 	
 	public static void main(String[] args) {
-		Stack<Integer> st = new StackArray<>();//создали объект стак эррэй типа стек (интерфейс)
-		Stack <String> str = new StackArray<>(5);
+		DequeStack<Integer> st = new DequeStack<>();//создали объект стак эррэй типа стек (интерфейс)
+		DequeStack<String> str = new DequeStack<>();
 		
 		if (st.getClass()==str.getClass()) {
 			System.out.printf("Classes are both %s%n", st.getClass());
 		}
-		
+		st.push(25);
+		str.push("String");
+		System.out.println(str.pop());
 		
 	}
 	
